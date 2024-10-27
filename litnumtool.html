@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+    <style>
+        .navbar-custom {
+            background-color: #002366; /* Warna biru tua */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white; /* Warna teks putih */
+        }
+        .navbar-custom .navbar-brand:hover,
+        .navbar-custom .nav-link:hover {
+            color: #f8f9fa; /* Warna teks putih saat hover */
+        }
+    </style>
+  <link as='script' href='https://cdn.jsdelivr.net/gh/nextapps-de/winbox@0.1.8/dist/winbox.bundle.js' rel='preload'/>
+  <script defer='defer' src='https://cdn.jsdelivr.net/gh/nextapps-de/winbox@0.1.8/dist/winbox.bundle.js'></script>
+  <title>AI Guru Toolkits</title>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'/>
+  <link href='https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css' rel='stylesheet'/>
+  <script src='https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js'></script>
+  <link crossorigin='anonymous' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' rel='stylesheet'/>
+  <script src='https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js'></script>
+  <script src='https://cdn.staticfile.org/markdown-it/13.0.1/markdown-it.min.js'></script>
+  <style>
+    body {
+      font-size: 14px;
+    }
+    h1 {
+      color: darkblue;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 20px;
+      color: darkblue;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      color: DodgerBlue;
+    }
+    h4 {
+      font-size: 15px;
+    }
+    .chat-box {
+      height: 67vh;
+      overflow-y: scroll;
+      display: none;
+    }
+    .message {
+      margin-bottom: 10px;
+      padding: 10px;
+      padding-bottom: 0;
+      border-radius: 10px;
+      display: inline-block;
+      max-width: 70%;
+      word-wrap: break-word;
+      white-space: normal;
+    }
+    .left-side {
+      background-color: lightgray;
+      float: center;
+      text-align: left;
+    }
+    .right-side {
+      background-color: lightgreen;
+      float: right;
+    }
+    table, th, td {
+      border: 1px solid;
+    }
+  </style>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+</head>
+<body><!-- Google tag (gtag.js) -->
+
+<nav class="navbar navbar-expand-lg navbar-custom  fixed-top ">
+        <div class="container-fluid">
+            <!-- Logo di sebelah kiri -->
+            <a class="navbar-brand" href="#">
+                <img src="bbgpdiy.png" alt="Logo" height="30" class="d-inline-block align-text-top">
+                Literasi
+            </a>
+
+            <!-- Tombol toggler untuk mode mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu di sebelah kanan -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sd.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<br><br>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4KX380T5BD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4KX380T5BD');
+</script>
+
+
+
+
+<!--
+<p><button class="navbar-toggler navbar-toggler-right"> <span class="navbar-toggler-icon">&nbsp;</span> Guru Toolkits </button> <a class="navbar-brand" href="https://mtamim.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEiauoRQ7i9fcn7yR25Se_NteOxPGJkajAdKl1nhb50wxUY8bzz93j4o-1wPpaBCLPiuM8T-lJtBi1S_3tUv5nKhsWmoMOWtR5r34de5osbK-d8m0S6YncVyNi2xRZyfenLKmTNdBVta5JjVKnYnSBPQCYnMZferjot6AJDjk3q4fMbFx3czh4Be-QWJigI0=s454" alt="" width="25%" height="50%" align="right" /></a></p>
+<div id="navbarSupportedContent" class="collapse navbar-collapse">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active"> <a class="nav-link" href="#">Home</a> </li>
+</ul>
+</div>
+<div id="jumbo" class="jumbotron jumbotron-fluid bg-dark text-white" style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz3ilvd1goXU75C0Sf4PTSCorRCYOK2tmgvmJQ6u6k57jdK7fHbchw8fvdqD1IkyixcKiBrwFYtIT8flAX1_9puD8lvN-wT3CJw-i20-AUomTYv8GngnGTjunhambFZ9SAc_HQK6stGRiHxrowU3rNLoKffSH-pMorKedCwZt4gPheqGYpnzaLrBY4fyI/s16000/jumbo1.png) no-repeat center center fixed; background-size: cover;">
+
+<div class="container">
+<h1 class="display-4 text-white">GTK: AI Guru Toolkit</h1>
+<p class="lead">Aplikasi untuk meningkatkan pengajaran dengan bantuan AI untuk guru meningkatkan kualitas pengajaran dengan memberikan rekomendasi metode pengajaran yang efektif, asesmen belajar siswa, strategi pengajaran, dll. Silahkan akses video panduan untuk pemanfaatan lebih lanjut. Untuk update terbaru atau konfirmasi jika ada Error, silahkan bergabung di WA Grup. Jangan lupa, Selalu lakukan cek-ricek terhadap hasil dari AI.</p>
+<p class="lead"><button class="btn btn-warning btn-lg" onclick="document.getElementById('jumbo').style.display = 'none'">Mulai</button> <button class="btn btn-success btn-lg"> <a href="https://www.youtube.com/@MTamim/videos">Tutorial</a></button></p>
+</div>
+</div>
+
+-->
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 mb-3">
+<div>
+<div></div>
+<div class="container">
+<div class="row">
+<div class="col-md-3">
+<div style="color: black;">
+
+<br /> <strong>Komponen Rancangan:</strong></div>
+<select id="komponen" class="form-control text-dark" name="komponen"> 
+
+
+<option value='ide pembelajaran yang melibatkan peningkatan kompetensi literasi siswa melalui topik materi pembelajaran. fokuskan pada literasi terkait fakta/konsep/prosedur yang sesuai pada materi yang dipelajari disertai contoh-contoh yang dapat mencapai tujuan pembelajaran sekaligus meningkatkan kemampuan literasinya. di akhir, jelaskan literasi yang dilatihkan dalam materi pelajaran yang bersangkutan. Berikan aktivitas pembelajarannya. Berikan alternatif untuk asesmen literasinya tsb. Topik materi pelajaran :'>Pembelajaran Literasi</option>
+<option value='ide pembelajaran yang melibatkan peningkatan kompetensi numerasi siswa melalui topik materi pembelajaran. fokuskan pada numerasi terkait fakta/konsep/prosedur yang sesuai pada materi yang dipelajari disertai contoh-contoh yang dapat mencapai tujuan pembelajaran sekaligus meningkatkan kemampuan numerasi. di akhir, jelaskan kemampuan numerasi yang dilatihkan dalam materi pelajaran yang bersangkutan. Berikan aktivitas pembelajarannya. Berikan alternatif untuk asesmen numerasi tsb. Topik materi pelajaran :'>Pembelajaran Numerasi</option>
+
+<option value="Buatkan soal literasi pada suatu topik materi. Fokus pada kemampuan literasi: Soal literasi harus berfokus pada kemampuan membaca, menulis, dan memahami teks, bukan hanya mengingat fakta atau informasi.Menggunakan bahasa yang jelas dan singkat: Soal harus menggunakan bahasa yang jelas, singkat, dan tidak bermakna ganda.Memiliki stimulus yang relevan: Stimulus yang digunakan harus relevan dengan topik dan tujuan soal.Mengukur kemampuan yang spesifik: Soal harus mengukur kemampuan literasi yang spesifik, seperti kemampuan membaca pemahaman, kemampuan menulis, atau kemampuan menganalisis teks.Topik materinya adalah: ">Soal Literasi</option>
+<option value="Buatkan soal numerasi pada suatu topik materi. Fokus pada kemampuan numerasi: Soal numerasi harus berfokus pada kemampuan menggunakan angka dan konsep matematika, bukan hanya mengingat fakta atau informasi.Menggunakan bahasa yang jelas dan singkat: Soal harus menggunakan bahasa yang jelas, singkat, dan tidak bermakna ganda.Memiliki konteks yang relevan: Konteks soal harus relevan dengan kehidupan sehari-hari atau bidang studi yang spesifik.Mengukur kemampuan yang spesifik: Soal harus mengukur kemampuan numerasi yang spesifik, seperti kemampuan menghitung, mengukur, atau menganalisis data.Topik materinya adalah: ">Soal Numerasi</option>
+
+</select> <br />
+<div style="color: black;"><strong>Topik, Mapel dan Jenjang Kelas:</strong></div>
+<textarea id="userInput" class="form-control" rows="3"></textarea> <br />
+<div class="btn-group"><input id="sendButton" class="form-control btn btn-warning btn-rounded" style="color: white;" type="button" value="SUBMIT" /></div>
+<div id="loading" class="text-center" style="display: none;">
+
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivL2OzreT_aLKW6K2aiRvsdStE1NiWdirOeWbbJjAwm6Ui7S7UiVCO_SALoD6ABs1mxzrYI1yEr4xAE2xzyOtUuIJZWLuRUxS8SsPeexSKFhwHR7V9HlywhORhtW2SbfIp5lTEohAzzyerakBYy65rkpUFflYh_5IfAaPYS0RSu2SwljQsEikWtkvHrwGw/s1600/loadingtech.gif" alt="" width="200" height="200" /><br />LOADING...</div>
+
+
+</div>
+
+
+<div class="col-md-9"><br /> <textarea id="txtresp" style="max-width: 100%; height: 470px; border-radius: 10px; box-shadow: 0 0 0 1px #aaa; border: 1px solid transparent;" cols="100" rows="15"></textarea> <br /> <button onclick="clearEditor()">Hapus Teks</button><br />
+<script type="text/javascript">// <![CDATA[
+                  var simplemde = new SimpleMDE({ element: document.getElementById("txtresp"), toolbar:false,spellChecker: false });
+// ]]></script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">// <![CDATA[
+    function clearContent(){
+      document.getElementById('chatbox').innerHTML = '';
+    }
+    const chatbox = $("#chatbox");
+    const komponen = $("#komponen");
+    const userInput = $("#userInput");
+    const sendButton = $("#sendButton");
+    let messages = [];
+    sendButton.on("click", () => {
+      let message = "Tuliskan " + komponen.val() + " " + userInput.val() + " (Jawablah dengan Bahasa Indonesia!) (gunakan markdown header (mulai ##) dan sub-header (###, ####) jika perlu. Gunakan format tabel markdown jika diperlukan). Konteks pendidikan dasar dan menengah.Jawabkah dalam bahasa Indonesia ";
+      if (message) {
+        messages.push({
+          "role": "user",
+          "content": message
+        });
+        const displaytext = window.markdownit().render(message);
+        let userMessageHtml = '<pre><div>' + displaytext + '</div></pre>';
+        sendButton.val("LOADING...");
+        document.getElementById("loading").style.display = "block";
+        if (simplemde.isPreviewActive() == true) simplemde.togglePreview();
+        fetchMessages();
+      }
+    });
+    userInput.on("keydown", (event) => {
+      if (event.keyCode === 13 && !event.ctrlKey && !event.shiftKey) {
+        event.preventDefault();
+        sendButton.click();
+      } else if (event.keyCode === 13 && (event.ctrlKey || event.shiftKey)) {
+        event.preventDefault();
+        const cursorPosition = userInput.prop("selectionStart");
+        const currentValue = userInput.val();
+        userInput.val(
+          currentValue.slice(0, cursorPosition) +
+          "\n" +
+          currentValue.slice(cursorPosition)
+        );
+        userInput.prop("selectionStart", cursorPosition + 1);
+        userInput.prop("selectionEnd", cursorPosition + 1);
+      }
+    });
+    function fetchMessages() {
+      apiKey = "csk-d3rmj2fyyr6cffe62xhpjkxy5d4fpvyftj5jh29hdhhcrmn2";
+      var settings = {
+        url: "https://api.cerebras.ai/v1/chat/completions",
+        method: "POST",
+        timeout: 0,
+        headers: {
+          "Authorization": "Bearer " + apiKey,
+          "Content-Type": "application/json"
+        },
+        data: JSON.stringify({
+          model: "llama3.1-70b",
+          messages: messages
+        })
+      };
+      $.ajax(settings).done(function(response) {
+        const message = response.choices[0].message;
+        messages.push({
+          "role": message.role,
+          "content": message.content
+        });
+        const htmlText = window.markdownit().render(message.content);
+        const botMessageHtml = '<div>' + htmlText + '</div>';
+        var pos = simplemde.codemirror.getCursor();
+        simplemde.codemirror.setSelection(pos, pos);
+        simplemde.codemirror.replaceSelection(message.content + "\n \n ____ \n \n");
+        if (simplemde.isPreviewActive() == false) simplemde.togglePreview();
+        chatbox.animate({ scrollTop: 20000000 }, "slow");
+        sendButton.val("SUBMIT");
+        sendButton.prop("disabled", false);
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("userInput").focus();
+        var data = {
+          email: 'GTK1',
+          chatbot: 'GTK-1',
+          data1: userInput.val() + " ",
+          data2: htmlText,
+          bot: 'tamimbot_eksperimen'
+        };
+        sendDataToPHP('https://rumahguru.org/chats/save_data.php', data, function(error, response) {
+          if (error) {
+            console.error(error);
+          } else {
+            console.log(response);
+          }
+        });
+      }).fail(function(jqXHR, textStatus, errorThrown) {
+        alert("Error loading...");
+        let errorText = 'Please provide chatGPT apiKey and try again.';
+        let errorMessage = '<pre><div>' + errorText + '</div></pre>';
+        chatbox.append(errorMessage);
+        chatbox.animate({ scrollTop: 20000000 }, "slow");
+      });
+    }
+    function copyText() {
+      const element = document.querySelector('#txtresp');
+      element.select();
+      element.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+    }
+
+    function toggle() {
+      var x = document.getElementById("chatbox");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }    
+
+    function clearEditor() {
+      // Destroy the SimpleMDE instance
+      simplemde.toTextArea();
+      document.getElementById("txtresp").value = "";
+      // Create a new SimpleMDE instance with an empty value
+      simplemde = new SimpleMDE({
+        element: document.getElementById("txtresp"),
+        initialValue: ""
+      });
+    }   
+
+    function sendDataToPHP(url, data, callback) {
+      var xhr = new XMLHttpRequest();
+      var jsonData = JSON.stringify(data);
+
+      xhr.open('POST', url, true);
+      xhr.setRequestHeader('Content-type', 'application/json');
+
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          callback(null, xhr.responseText);
+        } else {
+          callback('Error: ' + xhr.status);
+        }
+      };
+
+      xhr.onerror = function() {
+        callback('Request failed.');
+      };
+
+      xhr.send(jsonData);
+    }
+// ]]></script>
+<script type="text/javascript">// <![CDATA[
+    function winBox() {
+      var winbox = new WinBox("Vera-ChatBot");
+      var name = document.getElementById("nickname");   
+      var url = "https://rumahguru.org/ai/bot/vera.php?name=" + document.getElementById("nickname").value;   
+      winbox.setBackground("#0000ff");
+      winbox.resize("100%", "100%");
+      winbox.move("right", "center");
+      winbox.setUrl(url);
+    }
+// ]]></script>
+<!-- Histats.com  START (html only)-->
+<p><a href="https://www.histats.com/viewstats/?SID=4767358&amp;f=2" target="_blank">
+<div id="histatsC"><img src="http://s4is.histats.com/stats/i/4767358.gif?4767358&amp;103" border="0" alt="" /></div>
+</a></p>
+<!-- Histats.com  END  --> <!-- Statcounter code for mtamim http://mtamim.com on Blogger -->
+<script type="text/javascript">// <![CDATA[
+    var sc_project = 12953963; 
+    var sc_invisible = 1; 
+    var sc_security = "51347e8a";
+// ]]></script>
+<script src="https://www.statcounter.com/counter/counter_xhtml.js" type="text/javascript"></script>
+<p><noscript>
+    <div class='statcounter'>
+      <a class='statcounter' href='https://statcounter.com/' title='Web Analytics Made Easy - Statcounter'>
+        <img alt='Web Analytics Made Easy - Statcounter' class='statcounter' referrerpolicy='no-referrer-when-downgrade' src='https://c.statcounter.com/12953963/0/51347e8a/1/'/>
+      </a>
+    </div>
+  </noscript></p>
+<!-- End of Statcounter Code -->
+<script type="text/javascript">// <![CDATA[
+    function winBox() {
+      var winbox = new WinBox("Scholar ChatBot");
+      var name = document.getElementById("nickname");   
+      var url = "https://rumahguru.org/chats/gr.php?m=gemma2-9b-it";
+      winbox.setBackground("#0000ff");
+      winbox.resize("100%", "100%");
+      winbox.move("right", "center");
+      winbox.setUrl(url);
+    }
+// ]]></script>
+</body>
+<!-- Hosted by www.Geocities.ws -->
+</html>
